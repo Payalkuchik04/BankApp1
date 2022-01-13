@@ -21,6 +21,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
+	
 	 
 	@PostMapping("/customer")
 	public Customer postCustomer(@RequestBody Customer customer) {
@@ -38,4 +39,7 @@ public class CustomerController {
 		UserInfo user = customerService.getUserByName(principal.getName());
 		return user; 
 	}
+	
+	
+
 }
